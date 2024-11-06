@@ -3,75 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выкуп товаров и доставка</title>
+    <title>Выкуп товаров и доставка из-за рубежа</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <div class="logo">
-            <h1>Моя компания</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#hero">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-        <!-- Новый текст в шапке -->
-        <div class="header-info">
-            <p>Многие иностранные интернет-магазины перестали доставлять в Россию, но с нами это не проблема: вы можете оплатить товары прямо у нас на сайте российскими картами, мы выкупим для вас товары на европейских или американских площадках, и доставим вам домой или в пункт выдачи максимально быстро и по самым выгодным ценам. Читайте инструкцию о том, как правильно заказывать и где искать скидки!</p>
+        <div class="container">
+            <h1>Выкуп товаров из зарубежных интернет-магазинов</h1>
+            <p>Многие иностранные интернет-магазины перестали доставлять в Россию, но с нами это не проблема: вы можете оплатить товары прямо у нас на сайте российскими картами, мы выкупим для вас товары на европейских или американских площадках, и доставим вам домой или в пункт выдачи максимально быстро и по самым выгодным ценам.</p>
         </div>
     </header>
-
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Выкуп товаров из-за рубежа и доставка в Россию</h2>
-            <p>Мы поможем вам купить товары на зарубежных сайтах и доставить их в Россию.</p>
-            <a href="#contact" class="btn">Связаться с нами</a>
+    
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Как это работает?</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Шаг 1</h3>
+                    <p>Вы выбираете товары на международных сайтах и отправляете нам ссылки.</p>
+                </div>
+                <div class="step">
+                    <h3>Шаг 2</h3>
+                    <p>Мы выкупаем товары и отправляем их вам. Вы оплачиваете прямо на нашем сайте!</p>
+                </div>
+                <div class="step">
+                    <h3>Шаг 3</h3>
+                    <p>Получайте свою покупку в кратчайшие сроки с доставкой по выгодным ценам.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Наши услуги</h2>
-        <div class="service">
-            <h3>Выкуп товаров</h3>
-            <p>Поможем вам купить товары с зарубежных сайтов, которых нет в России.</p>
+    <section class="contact">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <p>Если у вас есть вопросы или вы хотите заказать товар, напишите нам через контактную форму.</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
         </div>
-        <div class="service">
-            <h3>Доставка</h3>
-            <p>Быстрая и безопасная доставка товаров прямо к вашему порогу.</p>
-        </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Мы предлагаем удобный сервис по выкупу товаров с зарубежных сайтов. За годы работы мы зарекомендовали себя как надежный партнер для тысяч клиентов.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Контакты</h2>
-        <form>
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Ваш email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Сообщение</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit" class="btn">Отправить</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Моя компания. Все права защищены.</p>
+        <div class="container">
+            <p>&copy; 2024 Выкуп товаров. Все права защищены.</p>
+        </div>
     </footer>
-
 </body>
 </html>
