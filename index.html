@@ -3,53 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Выкуп товаров с зарубежных сайтов</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Выкуп товаров и доставка</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Меню навигации -->
-    <nav>
-        <ul>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </nav>
-
-    <!-- Главный блок -->
+    <!-- Header -->
     <header>
-        <h1>Выкуп товаров с зарубежных сайтов</h1>
-        <p>Предлагаем услуги по выкупу товаров из интернет-магазинов за рубежом и доставке в Россию. Надежно, быстро и без лишних сложностей.</p>
+        <div class="logo">
+            <h1>Моя компания</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+        <!-- Новый текст в шапке -->
+        <div class="header-info">
+            <p>Многие иностранные интернет-магазины перестали доставлять в Россию, но с нами это не проблема: вы можете оплатить товары прямо у нас на сайте российскими картами, мы выкупим для вас товары на европейских или американских площадках, и доставим вам домой или в пункт выдачи максимально быстро и по самым выгодным ценам. Читайте инструкцию о том, как правильно заказывать и где искать скидки!</p>
+        </div>
     </header>
 
-    <!-- Раздел О нас -->
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Мы — команда профессионалов, готовая помочь вам с покупками на международных интернет-платформах. Простой и удобный сервис, который сэкономит ваше время и деньги.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Выкуп товаров из-за рубежа и доставка в Россию</h2>
+            <p>Мы поможем вам купить товары на зарубежных сайтах и доставить их в Россию.</p>
+            <a href="#contact" class="btn">Связаться с нами</a>
+        </div>
     </section>
 
-    <!-- Раздел Услуги -->
+    <!-- Services Section -->
     <section id="services">
         <h2>Наши услуги</h2>
-        <p>Мы предлагаем следующие услуги:</p>
-        <ul>
-            <li><strong>Выкуп товаров:</strong> Покупаем товары на зарубежных сайтах по вашему запросу.</li>
-            <li><strong>Доставка в Россию:</strong> Быстрая и безопасная доставка товара в любую точку России.</li>
-            <li><strong>Консультации:</strong> Помогаем с поиском товара, оформлением покупки и отслеживанием посылки.</li>
-        </ul>
+        <div class="service">
+            <h3>Выкуп товаров</h3>
+            <p>Поможем вам купить товары с зарубежных сайтов, которых нет в России.</p>
+        </div>
+        <div class="service">
+            <h3>Доставка</h3>
+            <p>Быстрая и безопасная доставка товаров прямо к вашему порогу.</p>
+        </div>
     </section>
 
-    <!-- Раздел Контакты -->
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы предлагаем удобный сервис по выкупу товаров с зарубежных сайтов. За годы работы мы зарекомендовали себя как надежный партнер для тысяч клиентов.</p>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Контакты</h2>
-        <p>Свяжитесь с нами:</p>
         <form>
-            <input type="text" placeholder="Ваше имя" required>
-            <input type="email" placeholder="Ваш email" required>
-            <textarea placeholder="Ваше сообщение" required></textarea>
-            <button type="submit">Отправить</button>
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Ваш email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Отправить</button>
         </form>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Моя компания. Все права защищены.</p>
+    </footer>
+
 </body>
 </html>
