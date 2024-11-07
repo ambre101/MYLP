@@ -10,7 +10,7 @@
     <header>
         <div class="container">
             <h1>Оформляйте заказы с иностранных сайтов и оплачивайте международные сервисы легко и безопасно</h1>
-            <p>Многие иностранные интернет-магазины перестали доставлять в Россию, но с нами это не проблема: вы можете оплатить товары прямо у нас на сайте российскими картами, мы выкупим для вас товары на европейских или американских площадках, и доставим вам домой или в пункт выдачи максимально быстро и по самым выгодным ценам.</p>
+            <p>Многие иностранные интернет-магазины перестали доставлять в Россию, но с нами это не проблема: вы можете оплатить товары прямо у нас на сайте российскими картами, мы выкупаем для вас товары на европейских или американских площадках, и доставим вам домой или в пункт выдачи максимально быстро и по самым выгодным ценам.</p>
         </div>
     </header>
     
@@ -34,12 +34,16 @@
         <div class="container">
             <h2>Связаться с нами</h2>
             <p>Если у вас есть вопросы или вы хотите заказать товар, напишите нам через контактную форму.</p>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
                 <button type="submit">Отправить</button>
             </form>
+            <!-- Кнопка для перехода в Telegram -->
+            <a href="https://t.me/order_express_bot" target="_blank">
+                <button>Написать в Telegram</button>
+            </a>
         </div>
     </section>
 
@@ -48,5 +52,35 @@
             <p>&copy; 2024 Выкуп товаров. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Отменяем стандартное отправление формы
+
+            var formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
+
+            // Отправка POST-запроса на сервер Flask
+            fetch('http://127.0.0.1:5000/send_message', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)  // Передаем данные формы в формате JSON
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert("Сообщение отправлено!");  // Уведомление пользователю о статусе
+                console.log(data);  // Логируем ответ от сервера
+            })
+            .catch(error => {
+                alert("Ошибка при отправке сообщения.");
+                console.error(error);
+            });
+        });
+    </script>
 </body>
 </html>
