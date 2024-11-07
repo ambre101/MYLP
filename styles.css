@@ -113,6 +113,32 @@ form button:hover {
     background-color: #2980b9;
 }
 
+/* Стили для кнопки перехода в Telegram */
+.telegram-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #0088cc; /* Цвет фона (голубой) */
+    color: white; /* Цвет текста */
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.telegram-button:hover {
+    background-color: #005f80; /* Цвет фона при наведении */
+    transform: scale(1.1); /* Увеличение кнопки */
+}
+
+.telegram-button:active {
+    background-color: #003f5f; /* Цвет фона при нажатии */
+    transform: scale(1); /* Возвращаем в нормальный размер */
+}
+
 /* Подвал */
 footer {
     background-color: #2c3e50;
